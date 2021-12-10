@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>responsive personal portfolio website design tutorail</title>
+    <title> portfolio website</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -14,8 +14,10 @@
     />
     <!-- custom css file link  -->
     <link rel="stylesheet" href="styles.css" />
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   </head>
   <body>
+    <div class="preloader" id="preloader"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- custom js file link  -->
@@ -25,9 +27,16 @@
     <header>
       <div class="user">
 <br>
-        <img src="santhosh.jpeg" alt="" />
+        <img src="santhosh.jpeg" alt="my name" />
         <h3 class="name">Chekuri Santhosh</h3>
-        <p class="post">Web developer</p>
+        <p class="typingeffect">
+          I'm a
+          <span
+            class="txt-rotate"
+            data-period="500"
+            data-rotate='[ "Web Developer.", "Programmer." ]'
+          ></span>
+        </p>
         <div class="icon__part">
           <a
             href="https://www.facebook.com/santhosh.chekuri.9/"
@@ -240,25 +249,50 @@
           </div>
         </div>
 
+              </div>
+    </section>
+
+<section class="projects" id="projects">
+      <h1 class="heading">my <span>Projects</span></h1>
+
+      <div class="box-container">
         <div class="boxer">
-          <span class="web">auth with db project(secured)</span>
+          <span class="web">O-Auth Project</span>
           <div class="box">
-            <img src="Img9.jpg" alt="auth project" />
+            <img src="Img9.jpg" alt="O-Auth Project" />
           </div>
+          <p class="proskill">
+            <span>Skills used:</span> Html,Css,Javascript,<br />
+            Nodejs,Express,Ejs, MongoDB,<br />Mongoose,Google Authentication
+          </p>
         </div>
 
         <div class="boxer">
-          <span class="web">To-do List project</span>
+          <span class="web">To-Do List</span>
           <div class="box">
-            <img src="Img10.jpg" alt="To-do List project" />
+            <img src="Img10.jpg" alt="To-Do List" />
           </div>
+          <p class="proskill">
+            <span>Skills used:</span>
+            Html,Css,Javascript,<br />Nodejs,Express,Ejs, MongoDB,<br />Mongoose
+          </p>
         </div>
 
         <div class="boxer">
-          <span class="web">Codenit Hackathon Project</span>
+          <span class="web">Campus Website</span>
           <div class="box">
-            <img src="Img11.jpg" alt="codenit hackathon project" />
+            <img src="Img11.jpg" alt="Campus-Website" />
           </div>
+          <p class="proskill"><span>Skills used:</span> Html,Css,Javascript<br><br></p>
+        </div>
+<div class="boxer">
+          <span class="web">Weather Project</span>
+          <div class="box">
+            <img src="Img12.jpg" alt="O-Auth Project" />
+          </div>
+          <p class="proskill">
+            <span>Skills used:</span> Python, Weather API<br><br>
+          </p>
         </div>
       </div>
     </section>
@@ -367,5 +401,29 @@
     <a href="#home" class="top">
       <img src="#" alt="" />
     </a>
+<script src="typingScript.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+       ScrollReveal({
+         reset: true,
+         distance: '40px',
+         duration: 2500,
+         delay: 100
+       });
+       ScrollReveal().reveal('header', { delay: 100, origin: 'left' });
+       ScrollReveal().reveal('.home', { delay: 150, origin: 'bottom' });
+       ScrollReveal().reveal('.about', { delay: 150, origin: 'bottom' });
+       ScrollReveal().reveal('.education', { delay: 150, origin: 'bottom' });
+       ScrollReveal().reveal('.portfolio', { delay: 150, origin: 'bottom' });
+       ScrollReveal().reveal('.projects', { delay: 150, origin: 'bottom' });
+       ScrollReveal().reveal('.activities', { delay: 150, origin: 'bottom' });
+       ScrollReveal().reveal('.contact', { delay: 150, origin: 'bottom' });
+   </script>
+   <script>
+     var loader = document.getElementById('preloader');
+     window.addEventListener("load",function(){
+       loader.style.display = "none";
+     })
+   </script>
   </body>
 </html>
